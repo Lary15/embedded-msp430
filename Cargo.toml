@@ -1,0 +1,21 @@
+[package]
+name = "embedded-msp430"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+msp430 = "0.2.2"
+msp430-rt = "0.2.4"
+panic-msp430 = "0.2.0"
+
+[dependencies.msp430-periph]
+version = "0.0.4"
+features = [ "msp430f5529-all" ]
+
+[profile.release]
+opt-level = "s" # Size is more important than performance on MSP430.
+codegen-units = 1 # Better size optimization.
+lto = "fat" # _Much_ better size optimization.
+# debug = true # Debug _can_ slightly increase size of .text segment.
