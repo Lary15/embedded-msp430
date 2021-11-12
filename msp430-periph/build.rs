@@ -1,3 +1,5 @@
+#![feature(array_value_iter)]
+
 use std::{array::IntoIter, env, fs, path::PathBuf};
 
 fn main() {
