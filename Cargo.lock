@@ -43,9 +43,8 @@ dependencies = [
 [[package]]
 name = "msp430-periph"
 version = "0.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f0c609a748ec4ca5e7599795c2771e5325d5235af0e1509efa9ba8b6f6615c19"
 dependencies = [
+ "msp430-rt",
  "peripherals",
 ]
 
